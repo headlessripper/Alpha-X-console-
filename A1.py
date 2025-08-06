@@ -494,7 +494,7 @@ class Window(QWidget):
         }
         response = requests.get(url, params=params)
         response.raise_for_status()  # Check for request errors
-        return response.json()
+        return response.json() # gets the response from the ApI key and displays it to the user 
 
     def display_results(self, results):
         """Display search results in the text browser."""
@@ -2165,3 +2165,4 @@ if __name__ == '__main__':
     window = Window()
     window.show()
     sys.exit(app.exec())
+
